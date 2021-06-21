@@ -1,5 +1,5 @@
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-const infuraKey = "a878b1e124f0461d9f7a68749475250f";
+const HDWallet = require('truffle-hdwallet-provider');
+const infuraKey = "9c6288cb418f48a48094bb33548dd4f5";
 
 const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -10,11 +10,14 @@ module.exports = {
       host: "127.0.0.1",
       port: 8545,
       network_id: "*" // Match any network id
-    }
-  },
-  rinkeby: {
-    provider: () => new HDWallet(mnemonic, `https://rinkeby.infura.io/v3/${inuraKey}`),
-    network_id: 4,
+    },
+    rinkeby: {
+      provider: () => new HDWallet(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+      network_id: 4,
+      networkCheckTimeout: 1000000,
+      timeoutBlocks: 200,
+      addressIndex: 2
+    },
   },
   compilers: {
     solc: {
