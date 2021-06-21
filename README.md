@@ -5,6 +5,14 @@
 - Node Version: 14.17.0
 - Web3: 0.20.6
 
+## Contract Address
+
+- SupplyChain: 0xF186AF862aBFE675FE1B75D140635e93a26a48e1
+- ConsumerRole: 0x11781D164227d79dE3601360D35B56e43b4f965f
+- RetailerRole: 0xba5B5A851e7f7b0607acbCA0C0d9097787885F13
+- DistributorRoler: 0x0B670F18a0d8d4D0f2c9CE14FD10C2671f061533
+- FarmerRole: 0x3273F8f9A6fb465A6F2271415420F6Af870c753f
+
 # Libraries
 
 - @truffle/hdwallet-provider -> connect and deploy to the rinkeby network
